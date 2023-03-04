@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package example.reserved_keyword;
+
+option go_package = "";
+
+message Account {
+    
+}

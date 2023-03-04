@@ -1,0 +1,25 @@
+
+
+
+1. Protbuffs provide f/w & b/w compatibility
+2. DO NOT change Tags
+3. Only TAGS matter, not field
+
+    cat simplebin | protoc --decode=example.simple.Simple proto/*.proto
+  --decode=MESSAGE_TYPE       Read a binary message of the given type from
+                              standard input and write it in text format
+                              to standard output.  The message type must
+                              be defined in PROTO_FILES or their imports.
+
+   cat simplebin | protoc --decode_raw
+  --decode_raw                Read an arbitrary protocol message from
+                              standard input and write the raw tag/value
+                              pairs in text format to standard output.  No
+                              PROTO_FILES should be given when using this
+                              flag.
+
+4. Where to find option for proto files: protobuf/src/google/protobuf/descriptor.proto
+
+5. 
+    a. Name of protofile must be in lower snake case
+    b. Imports must be ordered alphabetically
