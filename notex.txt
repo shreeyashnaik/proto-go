@@ -19,7 +19,11 @@
                               flag.
 
 4. Where to find option for proto files: protobuf/src/google/protobuf/descriptor.proto
+    eg. option go_package = "github.com/shreeyashnaik/proto-go/proto"
 
 5. 
-    a. Name of protofile must be in lower snake case
+    a. Name of protofile must be in lower_snake_case.proto
     b. Imports must be ordered alphabetically
+    c. message CamelCase {
+        type lower_snake_case = 1;
+    }
